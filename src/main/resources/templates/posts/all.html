@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div th:each="post : ${posts}">
+        <div class="well">
+            <div class="media">
+                <div clas="media-body">
+                    <h4 class="media-heading" th:text="${post.title}"></h4>
+                    <p th:text="${post.content}"></p>
+                </div>
+            </div>
+            <a th:href="@{'/posts/' + ${post.id}}">Comment</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
