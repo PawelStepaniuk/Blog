@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity //Odpowiada za zapisywanie do bazy danych
+@Entity
 public class Post {
 
     @Id
@@ -18,7 +18,6 @@ public class Post {
     private String content;
 
 
-    //Klucz obcy pobiera post z klasy Comment
     @OneToMany(mappedBy = "post")
     private List<Comment> comments = new ArrayList<>();
 

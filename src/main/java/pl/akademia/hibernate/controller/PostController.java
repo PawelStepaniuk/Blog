@@ -15,9 +15,10 @@ import pl.akademia.hibernate.model.Post;
 
 @Controller
 public class PostController {
-    //Generuje komponent
+
     @Autowired
     private PostDao postDao;
+
     @GetMapping("/posts/add")
     public String addPost() {
         return "posts/add";
